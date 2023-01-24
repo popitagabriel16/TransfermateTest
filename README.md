@@ -1,8 +1,8 @@
 # TransfermateTest
 All steps are done:
-1. Creating test cases
+1. Creating test cases (positive-happyend/negative-sadend)
 2. Execute by automation test cases from point 1
-3. Activate account by API fetching SMS
+3. Activate account with Email and SMS text.
 
 Framework created with Java Selenium and Cucumber BDD tool
 
@@ -10,11 +10,14 @@ Framework designed following POM model with Page Factory.
 In TransfermateTests.class I'm using @Ignore because I'm assuming you will run the test by Cucumber.
 
 ExtentReport will generate reports with screeenshot on fail, only if you run the the tests from TransfermateTests.class
+
 ![image](https://user-images.githubusercontent.com/123422575/214205514-37c05e34-b8c4-461b-b90b-2a6c02441534.png)
 
 
 Cucumber reports will generate reports with screenshot on fail, if you run it from TestRunner and the Registration.feature
+
 ![image](https://user-images.githubusercontent.com/123422575/214204851-a3ee5900-a994-401c-b6fd-70b4720f2f8a.png)
+
 Framework also supports command line execution for cucumber and also the Transfermate.class
 
 -> Open cmd and type cd /path/to/project
