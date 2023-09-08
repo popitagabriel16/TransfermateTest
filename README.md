@@ -7,7 +7,7 @@ All steps are done:
 Framework created with Java Selenium and Cucumber BDD tool
 
 Framework designed following POM model with Page Factory.
-In TransfermateTests.class I'm using @Ignore because I'm assuming you will run the test by Cucumber.
+In TransfermateTests.class I'm using @Ignore because I'm assuming you will run the test by Cucumber, and I don't want the test to be run twice from command-line.
 
 ExtentReport will generate reports with screeenshot on fail, only if you run the the tests from TransfermateTests.class
 
