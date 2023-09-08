@@ -101,64 +101,64 @@ public class StepsRegistration extends TestSetup {
         Assert.assertTrue("Solving captcha math problem is not successful", registration.captchaCalculator(false));
     }
 
-    @Given("browser is opening")
-    public void browser_is_opening() throws Exception {
-        beforeSetup();
-    }
-    @When("user is navigating to Transfermate registration page")
-    public void user_is_navigating_to_transfermate_registration_page() {
-        driver.get(PropertiesFile.prop.getProperty("registrationPage"));
-    }
-    @And("select any of the account type options")
-    public void select_any_of_the_account_type_options() throws IOException {
-        init();
-        Assert.assertTrue("Entering account type is not successful", registration.enterAccountType(true));
-    }
-    @When("select a country account type")
-    public void select_a_country_account_type() throws IOException {
-        init();
-        Assert.assertTrue("Selecting country type is not successful", registration.selectCountry(true));
-    }
-    @And("type a proper First Name in the field")
-    public void type_a_proper_first_name_in_the_field() throws IOException {
-        init();
-        Assert.assertTrue("Entering name is not successful", registration.enterFirstName(true));
-    }
-    @And("type a proper Last Name in the field")
-    public void type_a_proper_last_name_in_the_field() throws IOException {
-        init();
-        Assert.assertTrue("Entering last name is not successful", registration.enterLastName(true));
-    }
-    @And("type a proper Email address in the field")
-    public void type_a_proper_email_address_in_the_field() throws IOException {
-        init();
-        Assert.assertTrue("Entering new generated email", registration.enterEmail(true));
-    }
-    @And("select any country code and type mobile phone number")
-    public void select_any_country_code_and_type_mobile_phone_number() throws IOException {
-        init();
-        Assert.assertTrue("Entering selecting country code and entering phone number is not successful", registration.selectPhoneCountry(true));
-    }
-    @And("check agreement policy")
-    public void check_agreement_policy() throws IOException {
-        init();
-        Assert.assertTrue("Checking agreement radio button is not successful", registration.checkTermsAndConditions(true));
-    }
-    @And("resolve captcha math problem")
-    public void resolve_captcha_math_problem() throws IOException {
-        init();
-        Assert.assertTrue("Solving captcha math problem is not successful", registration.captchaCalculator(true));
-    }
-    @Then("account creates successfully")
-    public void account_creates_successfully() throws IOException {
-        init();
-        Assert.assertTrue("Validate page after clicking on registration is not successful", registration.createAccount());
-    }
+        @Given("browser is opening")
+        public void browser_is_opening() throws Exception {
+            beforeSetup();
+        }
+        @When("user is navigating to Transfermate registration page")
+        public void user_is_navigating_to_transfermate_registration_page() {
+            driver.get(PropertiesFile.prop.getProperty("registrationPage"));
+        }
+        @And("select any of the account type options")
+        public void select_any_of_the_account_type_options() throws IOException {
+            init();
+            Assert.assertTrue("Entering account type is not successful", registration.enterAccountType(true));
+        }
+        @When("select a country account type")
+        public void select_a_country_account_type() throws IOException {
+            init();
+            Assert.assertTrue("Selecting country type is not successful", registration.selectCountry(true));
+        }
+        @And("type a proper First Name in the field")
+        public void type_a_proper_first_name_in_the_field() throws IOException {
+            init();
+            Assert.assertTrue("Entering name is not successful", registration.enterFirstName(true));
+        }
+        @And("type a proper Last Name in the field")
+        public void type_a_proper_last_name_in_the_field() throws IOException {
+            init();
+            Assert.assertTrue("Entering last name is not successful", registration.enterLastName(true));
+        }
+        @And("type a proper Email address in the field")
+        public void type_a_proper_email_address_in_the_field() throws IOException {
+            init();
+            Assert.assertTrue("Entering new generated email", registration.enterEmail(true));
+        }
+        @And("select any country code and type mobile phone number")
+        public void select_any_country_code_and_type_mobile_phone_number() throws IOException {
+            init();
+            Assert.assertTrue("Entering selecting country code and entering phone number is not successful", registration.selectPhoneCountry(true));
+        }
+        @And("check agreement policy")
+        public void check_agreement_policy() throws IOException {
+            init();
+            Assert.assertTrue("Checking agreement radio button is not successful", registration.checkTermsAndConditions(true));
+        }
+        @And("resolve captcha math problem")
+        public void resolve_captcha_math_problem() throws IOException {
+            init();
+            Assert.assertTrue("Solving captcha math problem is not successful", registration.captchaCalculator(true));
+        }
+        @Then("account creates successfully")
+        public void account_creates_successfully() throws IOException {
+            init();
+            Assert.assertTrue("Validate page after clicking on registration is not successful", registration.createAccount());
+        }
 
-    @Given("browser chrome is open on Email website")
-    public void browser_chrome_is_open_on_email_website() throws Exception {
-        beforeSetup();
-    }
+//    @Given("browser chrome is open on Email website")
+//    public void browser_chrome_is_open_on_email_website() throws Exception {
+//        beforeSetup();
+//    }
     @When("type the email that has been generated")
     public void type_the_email_that_has_been_generated() throws IOException {
         init();

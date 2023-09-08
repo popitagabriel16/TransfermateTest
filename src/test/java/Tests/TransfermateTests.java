@@ -27,7 +27,7 @@ public class TransfermateTests extends TestSetup {
         PageFactory.initElements(driver, emailGenerator);
     }
 
-    @Ignore
+    //@Ignore
     @Test
     public void generateEmailTest() throws IOException {
         ExtentTest test = extent.createTest("generateEmail() test has been called").assignDevice(System.getProperty("os.name")).assignCategory("TransfermateTests");
@@ -36,7 +36,7 @@ public class TransfermateTests extends TestSetup {
         Assert.assertTrue("Generating email is not successful", emailGenerator.randomEmailGenerator());
     }
 
-    @Ignore
+    //@Ignore
     @Test
     public void positiveRegistrationTest() throws IOException {
         ExtentTest test = extent.createTest("positiveRegistrationTest() test has been called").assignDevice(System.getProperty("os.name")).assignCategory("TransfermateTests");
@@ -53,7 +53,7 @@ public class TransfermateTests extends TestSetup {
         Assert.assertTrue("Validate page after clicking on registration is not successful", registration.createAccount());
     }
 
-    @Ignore
+  //  @Ignore
     @Test
     public void verifyActivationMailTest() throws IOException {
         ExtentTest test = extent.createTest("mailActivationTest() test has been called").assignDevice(System.getProperty("os.name")).assignCategory("TransfermateTests");
@@ -64,7 +64,7 @@ public class TransfermateTests extends TestSetup {
         Assert.assertTrue("Verify phone sms verification is not successful", registration.phoneSMS());
     }
 
-    @Ignore
+  //  @Ignore
     @Test
     public void negativeRegistrationTest() throws IOException {
         ExtentTest test = extent.createTest("positiveRegistrationTest() test has been called").assignDevice(System.getProperty("os.name")).assignCategory("TransfermateTests");
@@ -79,5 +79,7 @@ public class TransfermateTests extends TestSetup {
         Assert.assertTrue("Checking agreement radio button is not successful", registration.checkTermsAndConditions(false));
         Assert.assertTrue("Solving captcha math problem is not successful", registration.captchaCalculator(false));
     }
+
+
 
 }

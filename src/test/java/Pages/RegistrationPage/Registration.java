@@ -12,6 +12,7 @@ import net.objecthunter.exp4j.ExpressionBuilder;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -64,7 +65,7 @@ public class Registration {
     WebElement phoneField;
     @FindBy(xpath = "//*[contains(text(), 'Check your mail')]")
     WebElement checkMailMessage;
-    @FindBy(xpath = "//div[@role='application']")
+    @FindBy(xpath = "//*[@class='check-radio-label']")
     List<WebElement> randomTypeAccount;
     @FindBy(xpath = "//div[contains(text(), 'Please enter correct information!')]")
     WebElement captchaError;

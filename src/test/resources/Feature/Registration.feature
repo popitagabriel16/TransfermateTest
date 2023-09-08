@@ -21,8 +21,8 @@ Feature: Registration
       Then account creates successfully
 
   @negativeRegistration
-  Scenario:Verify unsuccessful registration
-    Given browser is opening to registration
+  Scenario: Verify unsuccessful registration
+    Given browser is opening
     When user is navigating to Transfermate registration website
     And don't select any of the account type options
     And select wrong country account type
@@ -32,6 +32,7 @@ Feature: Registration
     And select country code and type letters in mobile phone number field
     And don't check agreement policy
     Then type wrong number to resolve captcha math problem
+
 
 
   @verifyActivationMail

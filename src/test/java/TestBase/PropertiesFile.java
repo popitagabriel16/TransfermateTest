@@ -9,14 +9,14 @@ public class PropertiesFile {
     static String path = System.getProperty("user.dir");
 
     public static void getProperties() throws IOException {
-        InputStream input = new FileInputStream(path + "\\src\\test\\resources\\ConfigVariables\\config.properties");
+        InputStream input = new FileInputStream(path + "/src/test/resources/ConfigVariables/config.properties");
         prop.load(input);
         String browser = prop.getProperty("browser");
         TestSetup.browserName = prop.getProperty("browser");
     }
 
     public static void setProperties(Object text) throws IOException {
-        OutputStream output = new FileOutputStream(path + "\\src\\test\\resources\\ConfigVariables\\config.properties");
+        OutputStream output = new FileOutputStream(path + "/src/test/resources/ConfigVariables/config.properties");
         prop.store(output, null);
     }
 }
