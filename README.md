@@ -1,6 +1,6 @@
 # TransfermateTest
 All steps are done:
-1. Creating test cases (positive-happyflow/negativeflow)
+1. Creating test cases (happyflow/negativeflow)
 2. Execute by automation test cases from point 1
 3. Activate account with Email and SMS text.
 
