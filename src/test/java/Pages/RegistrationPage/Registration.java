@@ -1,5 +1,6 @@
 package Pages.RegistrationPage;
 
+import Pages.ElementsSeparateFromMethods.Methods;
 import Pages.EmailGeneratorPage.EmailGenerator;
 import TestBase.ExtentBaseMain;
 import TestBase.PropertiesFile;
@@ -32,6 +33,7 @@ public class Registration {
     private ExtentTest extentStep;
     Random random = new Random();
     private EmailGenerator eGen;
+    private Methods methods;
     public static final String ACCOUNT_SID = "ACfe44d277461293b4d966c8f974e0035b";
     public static final String AUTH_TOKEN = "e809d0ec8b7cfb747881f6499c887756";
 
@@ -99,6 +101,7 @@ public class Registration {
     public Registration(WebDriver driver) {
         this.driver = driver;
         this.eGen = new EmailGenerator(driver);
+        this.methods = new Methods(driver);
     }
 
     public void extentReport(ExtentTest extentStep) {
@@ -114,7 +117,8 @@ public class Registration {
     public boolean enterAccountType(boolean changedSteps) throws IOException {
         try {
             extentStep.info("enterAccountType() has been called");
-            cookiesAccept.click();
+            methods.acceptElementCookie();
+            //cookiesAccept.click();
             extentStep.info("Accepting cookies");
             if (changedSteps) {
                 int start = 0;
